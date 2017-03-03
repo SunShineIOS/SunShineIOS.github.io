@@ -90,7 +90,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/03/03/腾讯面经/index.html">
 <meta property="og:site_name" content="孙帅并不帅Blog">
 <meta property="og:description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;首先做个自我介绍，本人985小硕一个，不过自认为学历只是工作的敲门砖而已，具体能不能进公司的大门还是要看个人的水平，对于腾讯面经，其实我跟人感觉我很水，因为找工作的时候很多公司我都是一面都挂了，拿到腾讯offer之前还是一个offer都没有的，还有我面的是iOS客户端开发，技术方面也没有后台和算法的深，不过还是想说大公司对基础和思想很看重，iOS基础">
-<meta property="og:updated_time" content="2017-03-03T13:59:24.000Z">
+<meta property="og:updated_time" content="2017-03-03T14:07:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="腾讯面经">
 <meta name="twitter:description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;首先做个自我介绍，本人985小硕一个，不过自认为学历只是工作的敲门砖而已，具体能不能进公司的大门还是要看个人的水平，对于腾讯面经，其实我跟人感觉我很水，因为找工作的时候很多公司我都是一面都挂了，拿到腾讯offer之前还是一个offer都没有的，还有我面的是iOS客户端开发，技术方面也没有后台和算法的深，不过还是想说大公司对基础和思想很看重，iOS基础">
@@ -268,14 +268,11 @@
 
       
         <p>&ensp;&ensp;&ensp;&ensp;首先做个自我介绍，本人985小硕一个，不过自认为学历只是工作的敲门砖而已，具体能不能进公司的大门还是要看个人的水平，对于腾讯面经，其实我跟人感觉我很水，因为找工作的时候很多公司我都是一面都挂了，拿到腾讯offer之前还是一个offer都没有的，还有我面的是iOS客户端开发，技术方面也没有后台和算法的深，不过还是想说大公司对基础和思想很看重，iOS基础和底层我看了有大半个多月吧，确实学了不少，之前都只是会做项目，从来没考虑过这些，真的很天真，好了言归正传。</p>
-<p>##iOS需要掌握的几个点(我大致看的是这些)</p>
-<p><ol><br> <li>@property默认的几个关键字</li><br> <li>或许大家都知道copy和retain的区别，有没有了解过copy和mutable copy的区别呢，还有系统的几个类(NSArray，NSString，NSDictionary)为什么要用copy而不用mutable copy和retain或者strong呢</li><br> <li>delegate为什么要用weak呢，weak系统是怎么释放的呢</li><br> <li>ARC机制，ARC到底是怎么运转的呢，牵扯的AutoreleasePool到底是怎么帮我们释放对象的呢（网易面试问到过）</li><br> <li>OC发送消息的机制，一个对象发送消息需要经历过哪些流程呢</li><br> <li>为什么主线程死不掉可以一直响应我们的操作，而子线程完成任务之后，系统默认是回收了，它能不能也一直不死执行任务呢（RunLoop机制）</li><br> <li>一个项目里用到UIImage的imagenamed方法返回image对象，现在如果我想判断image named传入的字符串为空的话就返回image不是nil类型的怎么实现呢，如果项目里面有很多imagenamed的方法需要一个个修改吗</li><br> <li>内存优化方面，哪些情况会造成内存泄露呢</li><br> <li>离屏渲染，类似圆角问题，怎么避免（网上有很多）</li><br> <li> 多线程（GCD和operation的区别）</li><br> </ol></p>
-<p>##腾讯面经问题</p>
-<p>###一面<br>&ensp;&ensp;&ensp;&ensp;一面主要问了问我项目，由于项目比较简单，我就再说项目的时候，把基础性的东西和遇到的问题都加了进去，然后如何解决的方法以及学习过程说了一下，这点很重要，一定要牵着面试官走，不要面试官问一句答一句，感觉很不好。这点还要说一下是腾讯喜欢在你的项目基础上加一些场景设计问题，我当时被问到两个：</p>
-<ul>
-<li>一个是如果图片再被压缩处理之后数据流依然很大，这个时候你怎么给服务器上传图片。</li>
-<li>另一个是如果再添加一个数据类，你怎么做，如果我还想添加你怎么做（个人理解应该要用到设计模式来解决了）</li>
-</ul>
+<h2 id="iOS需要掌握的几个点-我大致看的是这些"><a href="#iOS需要掌握的几个点-我大致看的是这些" class="headerlink" title="iOS需要掌握的几个点(我大致看的是这些)"></a>iOS需要掌握的几个点(我大致看的是这些)</h2><p><ol><br> <li>@property默认的几个关键字</li><br> <li>或许大家都知道copy和retain的区别，有没有了解过copy和mutable copy的区别呢，还有系统的几个类(NSArray，NSString，NSDictionary)为什么要用copy而不用mutable copy和retain或者strong呢</li><br> <li>delegate为什么要用weak呢，weak系统是怎么释放的呢</li><br> <li>ARC机制，ARC到底是怎么运转的呢，牵扯的AutoreleasePool到底是怎么帮我们释放对象的呢（网易面试问到过）</li><br> <li>OC发送消息的机制，一个对象发送消息需要经历过哪些流程呢</li><br> <li>为什么主线程死不掉可以一直响应我们的操作，而子线程完成任务之后，系统默认是回收了，它能不能也一直不死执行任务呢（RunLoop机制）</li><br> <li>一个项目里用到UIImage的imagenamed方法返回image对象，现在如果我想判断image named传入的字符串为空的话就返回image不是nil类型的怎么实现呢，如果项目里面有很多imagenamed的方法需要一个个修改吗</li><br> <li>内存优化方面，哪些情况会造成内存泄露呢</li><br> <li>离屏渲染，类似圆角问题，怎么避免（网上有很多）</li><br> <li> 多线程（GCD和operation的区别）</li><br> </ol></p>
+<h2 id="腾讯面经问题"><a href="#腾讯面经问题" class="headerlink" title="腾讯面经问题"></a>腾讯面经问题</h2><h3 id="一面"><a href="#一面" class="headerlink" title="一面"></a>一面</h3><p>&ensp;&ensp;&ensp;&ensp;一面主要问了问我项目，由于项目比较简单，我就再说项目的时候，把基础性的东西和遇到的问题都加了进去，然后如何解决的方法以及学习过程说了一下，这点很重要，一定要牵着面试官走，不要面试官问一句答一句，感觉很不好。这点还要说一下是腾讯喜欢在你的项目基础上加一些场景设计问题，我当时被问到两个：</p>
+<p><ul></ul></p>
+<li>一个是如果图片再被压缩处理之后数据流依然很大，这个时候你怎么给服务器上传图片。</li>.<br><li>另一个是如果再添加一个数据类，你怎么做，如果我还想添加你怎么做（个人理解应该要用到设计模式来解决了）</li>
+
 <h3 id="二面"><a href="#二面" class="headerlink" title="二面"></a>二面</h3><p>二面依然是问的项目，最后问了一个算法题</p>
 <p>&ensp;&ensp;&ensp;&ensp;算法：一篇很长的英语文章，单词之间空格隔开，语句之间有标点符号（逗号，问号等）统计单词出现最多的次数并输出这个单词，我算法真的很菜，当时用了笨办法。</p>
 <p>&ensp;&ensp;&ensp;&ensp;智力题：这个大家应该都做过，两根绳子，一根烧完一个小时，绳子不能折断，不能对折，让你测出15分钟和45分钟</p>
@@ -418,7 +415,7 @@
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#二面"><span class="nav-number">1.</span> <span class="nav-text">二面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结束"><span class="nav-number">2.</span> <span class="nav-text">结束</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#iOS需要掌握的几个点-我大致看的是这些"><span class="nav-number">1.</span> <span class="nav-text">iOS需要掌握的几个点(我大致看的是这些)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#腾讯面经问题"><span class="nav-number">2.</span> <span class="nav-text">腾讯面经问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#一面"><span class="nav-number">2.1.</span> <span class="nav-text">一面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#二面"><span class="nav-number">2.2.</span> <span class="nav-text">二面</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结束"><span class="nav-number">2.3.</span> <span class="nav-text">结束</span></a></li></ol></li></ol></div>
             
           </div>
         </section>
