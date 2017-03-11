@@ -107,7 +107,7 @@
 <meta property="og:image" content="http://ommprbmup.bkt.clouddn.com/blogImage/png/015.png">
 <meta property="og:image" content="http://ommprbmup.bkt.clouddn.com/blogImage/png/016.png">
 <meta property="og:image" content="http://ommprbmup.bkt.clouddn.com/blogImage/png/017.png">
-<meta property="og:updated_time" content="2017-03-11T03:47:50.000Z">
+<meta property="og:updated_time" content="2017-03-11T03:56:14.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo+Github搭建个人博客">
 <meta name="twitter:description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;写这篇文章也是为了巩固一下使用Hexo搭建博客的流程，刚开始接触博客，应该说比较晚了，比较惭愧，那目前比较流行的大部分也是通过Hexo和GitHub来搭建个人博客，毕竟GitHub提供免费的服务器，这点还是很nice的，搭建过程也踩了不少坑，大致总结一下吧，也是通过网上搜索了我遇到的相关情况，把这些问题以及搭建的过程写下来后续我也能看看巩固一下，好了">
@@ -286,14 +286,12 @@
 
       
         <p>&ensp;&ensp;&ensp;&ensp;写这篇文章也是为了巩固一下使用Hexo搭建博客的流程，刚开始接触博客，应该说比较晚了，比较惭愧，那目前比较流行的大部分也是通过Hexo和GitHub来搭建个人博客，毕竟GitHub提供免费的服务器，这点还是很nice的，搭建过程也踩了不少坑，大致总结一下吧，也是通过网上搜索了我遇到的相关情况，把这些问题以及搭建的过程写下来后续我也能看看巩固一下，好了下面开始操练起来了。(目前是基于mac OS操作系统搭建的)</p>
-<p>##GitHub上创建repository</p>
-<p>###1.首先创建一个repository<br><img src="http://ommprbmup.bkt.clouddn.com/blogImage/png/001.png" alt="New repository"></p>
+<h2 id="GitHub上创建repository"><a href="#GitHub上创建repository" class="headerlink" title="GitHub上创建repository"></a>GitHub上创建repository</h2><h3 id="1-首先创建一个repository"><a href="#1-首先创建一个repository" class="headerlink" title="1.首先创建一个repository"></a>1.首先创建一个repository</h3><p><img src="http://ommprbmup.bkt.clouddn.com/blogImage/png/001.png" alt="New repository"></p>
 <p><img src="http://ommprbmup.bkt.clouddn.com/blogImage/png/002.png" alt="New repository"><br>&ensp;&ensp;&ensp;&ensp;这里注意一下Repository name一定是GitHub的用户名.github.io的形式，否则不能成功部署。到了这里点击Create repository就算创建成功了一个repository。</p>
-<p>###2.添加SSH Keys<br>&ensp;&ensp;&ensp;&ensp;这个很关键SSH keys，由于远程的代码管理是基于SSH的,所以要使用远程的Git则需要SSH的配置，继续上图开始配置。<br><img src="http://ommprbmup.bkt.clouddn.com/blogImage/png/003.png" alt="Personal Setting"></p>
+<h3 id="2-添加SSH-Keys"><a href="#2-添加SSH-Keys" class="headerlink" title="2.添加SSH Keys"></a>2.添加SSH Keys</h3><p>&ensp;&ensp;&ensp;&ensp;这个很关键SSH keys，由于远程的代码管理是基于SSH的,所以要使用远程的Git则需要SSH的配置，继续上图开始配置。<br><img src="http://ommprbmup.bkt.clouddn.com/blogImage/png/003.png" alt="Personal Setting"></p>
 <p><img src="http://ommprbmup.bkt.clouddn.com/blogImage/png/004.png" alt="New SSH Key"><br>&ensp;&ensp;&ensp;&ensp;这个选择到SSH and GPG keys会出现右边的界面，这个时候点击右上角的New SSH key就会出现下图。<br><img src="http://ommprbmup.bkt.clouddn.com/blogImage/png/005.png" alt="Add SSH Key"><br>&ensp;&ensp;&ensp;&ensp;title可以自己起个名字，关键是key怎么填写呢，看着需要一定的格式，是的这里我们需要通过终端打开自己的.ssh里面的一个id_rsa.pub文件如下图找到这个文件所在。<br><img src="http://ommprbmup.bkt.clouddn.com/blogImage/png/006.png" alt="Open id_rsa.pub"></p>
 <p><img src="http://ommprbmup.bkt.clouddn.com/blogImage/png/007.png" alt="Open id_rsa.pub"><br>&ensp;&ensp;&ensp;&ensp;打开id_rsa.pub文件，文本编辑器打开即可，我们需要将里面的东西全部复制下来。<br><img src="http://ommprbmup.bkt.clouddn.com/blogImage/png/008.png" alt="Copy id_rsa Content"><br>&ensp;&ensp;&ensp;&ensp;这个是我自己的，每个用户的不一样，复制之后就可以粘贴到我们之前说的这个key里面。<br><img src="http://ommprbmup.bkt.clouddn.com/blogImage/png/009.png" alt="Add Success"><br>&ensp;&ensp;&ensp;&ensp;至此SSH keys就算完成了，如何测试是否可行了呢，这时候打开终端，输入ssh -T git@github.com,如下图。<br><img src="http://ommprbmup.bkt.clouddn.com/blogImage/png/010.png" alt="Success"><br>&ensp;&ensp;&ensp;&ensp;如果出现successfully就是已经完成了。好了现在搭建GitHub的resitory就算完成了。</p>
-<p>##安装并设置Hexo主题</p>
-<p>###1.安装Hexo<br>&ensp;&ensp;&ensp;这些网上有很多，我就贴一下具体的步骤吧。</p>
+<h2 id="安装并设置Hexo主题"><a href="#安装并设置Hexo主题" class="headerlink" title="安装并设置Hexo主题"></a>安装并设置Hexo主题</h2><h3 id="1-安装Hexo"><a href="#1-安装Hexo" class="headerlink" title="1.安装Hexo"></a>1.安装Hexo</h3><p>&ensp;&ensp;&ensp;这些网上有很多，我就贴一下具体的步骤吧。</p>
 <p><strong>安装环境及Hexo</strong></p>
 <blockquote>
 <p>node.js</p>
@@ -310,8 +308,8 @@
 <p>2.cd /Users/sunshine/Blog/hexo</p>
 <p>3.npm install(若写入权限不够，加sudo)</p>
 </blockquote>
-<p>###2.配置Hexo<br>&ensp;&ensp;&ensp;配置文件有三个是比较重要的</p>
-<p>####_config.yml配置<br>&ensp;&ensp;&ensp;打开之后有几个是需要配置的，下图是_config.yml的几个比较重要的配置<br><img src="http://ommprbmup.bkt.clouddn.com/blogImage/png/013.png" alt="Set _config.yml"></p>
+<h3 id="2-配置Hexo"><a href="#2-配置Hexo" class="headerlink" title="2.配置Hexo"></a>2.配置Hexo</h3><p>&ensp;&ensp;&ensp;配置文件有三个是比较重要的</p>
+<h4 id="config-yml配置"><a href="#config-yml配置" class="headerlink" title="_config.yml配置"></a>_config.yml配置</h4><p>&ensp;&ensp;&ensp;打开之后有几个是需要配置的，下图是_config.yml的几个比较重要的配置<br><img src="http://ommprbmup.bkt.clouddn.com/blogImage/png/013.png" alt="Set _config.yml"></p>
 <p><img src="http://ommprbmup.bkt.clouddn.com/blogImage/png/012.png" alt="Set _config.yml"></p>
 <p><img src="http://ommprbmup.bkt.clouddn.com/blogImage/png/011.png" alt="Set _config.yml"></p>
 <p>&ensp;&ensp;&ensp;&ensp;首先<strong>Site</strong>下面的东西是博客上面需要显示的一些基本配置，关键是<strong>deploy</strong>下面的type注意一定是git现在Hexo3.0已经默认是git类型github已经不起作用了，还有branch事master分支，<strong>Extensions</strong>下面的theme是主题，我们可以自己配置一些喜欢的主题，之前我用的是<a href="http://moxfive.xyz/?qqdrsign=98D4" target="_blank" rel="external">MOxFIVE</a>写的<a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" rel="external">yelee</a>主题，可以在终端cd到hexo目录下（cd /Users/sunshine/Blog/hexo）执行一下命令。</p>
@@ -337,7 +335,7 @@
 <blockquote>
 <p>npm install hexo-deployer-git –save</p>
 </blockquote>
-<p>###3.总结<br>&ensp;&ensp;&ensp;&ensp;至此整个Hexo+GitHub基本就配置完成了，如果大家不想使用GitHub上的域名，可以自己在万网上买个域名，买完之后需要域名解析如下图。<br><img src="http://ommprbmup.bkt.clouddn.com/blogImage/png/015.png" alt="Buy www"><br>&ensp;&ensp;&ensp;&ensp;之后需要在自己建的resitory上也设置一下，如下图，打开setting，找到下面的GitHub pages在Custom domain下面写上自己买的域名就ok了，后面就可以拿出去装个逼还能跑了。<br><img src="http://ommprbmup.bkt.clouddn.com/blogImage/png/016.png" alt="Personal Setting"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>&ensp;&ensp;&ensp;&ensp;至此整个Hexo+GitHub基本就配置完成了，如果大家不想使用GitHub上的域名，可以自己在万网上买个域名，买完之后需要域名解析如下图。<br><img src="http://ommprbmup.bkt.clouddn.com/blogImage/png/015.png" alt="Buy www"><br>&ensp;&ensp;&ensp;&ensp;之后需要在自己建的resitory上也设置一下，如下图，打开setting，找到下面的GitHub pages在Custom domain下面写上自己买的域名就ok了，后面就可以拿出去装个逼还能跑了。<br><img src="http://ommprbmup.bkt.clouddn.com/blogImage/png/016.png" alt="Personal Setting"></p>
 <p><img src="http://ommprbmup.bkt.clouddn.com/blogImage/png/017.png" alt="Custom domain"><br>那么搭建了博客之后，我们就可以写自己的文章，和创建文章了，创建文章依然可以使用下面的指令</p>
 <blockquote>
 <p>hexo new “new article”</p>
@@ -498,7 +496,7 @@
               
             
             
-              <p class="post-toc-empty">此文章未包含目录</p>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#GitHub上创建repository"><span class="nav-number">1.</span> <span class="nav-text">GitHub上创建repository</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-首先创建一个repository"><span class="nav-number">1.1.</span> <span class="nav-text">1.首先创建一个repository</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-添加SSH-Keys"><span class="nav-number">1.2.</span> <span class="nav-text">2.添加SSH Keys</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#安装并设置Hexo主题"><span class="nav-number">2.</span> <span class="nav-text">安装并设置Hexo主题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-安装Hexo"><span class="nav-number">2.1.</span> <span class="nav-text">1.安装Hexo</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-配置Hexo"><span class="nav-number">2.2.</span> <span class="nav-text">2.配置Hexo</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#config-yml配置"><span class="nav-number">2.2.1.</span> <span class="nav-text">_config.yml配置</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">3.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
           </div>
         </section>
