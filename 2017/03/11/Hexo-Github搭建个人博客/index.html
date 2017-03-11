@@ -1,0 +1,644 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.2" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.2" />
+
+
+
+
+
+
+<meta name="description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;写这篇文章也是为了巩固一下使用Hexo搭建博客的流程，刚开始接触博客，应该说比较晚了，比较惭愧，那目前比较流行的大部分也是通过Hexo和GitHub来搭建个人博客，毕竟GitHub提供免费的服务器，这点还是很nice的，搭建过程也踩了不少坑，大致总结一下吧，也是通过网上搜索了我遇到的相关情况，把这些问题以及搭建的过程写下来后续我也能看看巩固一下，好了">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo+Github搭建个人博客">
+<meta property="og:url" content="http://yoursite.com/2017/03/11/Hexo-Github搭建个人博客/index.html">
+<meta property="og:site_name" content="孙帅并不帅Blog">
+<meta property="og:description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;写这篇文章也是为了巩固一下使用Hexo搭建博客的流程，刚开始接触博客，应该说比较晚了，比较惭愧，那目前比较流行的大部分也是通过Hexo和GitHub来搭建个人博客，毕竟GitHub提供免费的服务器，这点还是很nice的，搭建过程也踩了不少坑，大致总结一下吧，也是通过网上搜索了我遇到的相关情况，把这些问题以及搭建的过程写下来后续我也能看看巩固一下，好了">
+<meta property="og:image" content="http://ommprbmup.bkt.clouddn.com/blogImage/png/001.png">
+<meta property="og:image" content="http://ommprbmup.bkt.clouddn.com/blogImage/png/002.png">
+<meta property="og:image" content="http://ommprbmup.bkt.clouddn.com/blogImage/png/003.png">
+<meta property="og:image" content="http://ommprbmup.bkt.clouddn.com/blogImage/png/004.png">
+<meta property="og:image" content="http://ommprbmup.bkt.clouddn.com/blogImage/png/005.png">
+<meta property="og:image" content="http://ommprbmup.bkt.clouddn.com/blogImage/png/006.png">
+<meta property="og:image" content="http://ommprbmup.bkt.clouddn.com/blogImage/png/007.png">
+<meta property="og:image" content="http://ommprbmup.bkt.clouddn.com/blogImage/png/008.png">
+<meta property="og:image" content="http://ommprbmup.bkt.clouddn.com/blogImage/png/009.png">
+<meta property="og:image" content="http://ommprbmup.bkt.clouddn.com/blogImage/png/010.png">
+<meta property="og:image" content="http://ommprbmup.bkt.clouddn.com/blogImage/png/013.png">
+<meta property="og:image" content="http://ommprbmup.bkt.clouddn.com/blogImage/png/012.png">
+<meta property="og:image" content="http://ommprbmup.bkt.clouddn.com/blogImage/png/011.png">
+<meta property="og:image" content="http://ommprbmup.bkt.clouddn.com/blogImage/png/014.png">
+<meta property="og:image" content="http://ommprbmup.bkt.clouddn.com/blogImage/png/015.png">
+<meta property="og:image" content="http://ommprbmup.bkt.clouddn.com/blogImage/png/016.png">
+<meta property="og:image" content="http://ommprbmup.bkt.clouddn.com/blogImage/png/017.png">
+<meta property="og:updated_time" content="2017-03-11T03:41:17.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo+Github搭建个人博客">
+<meta name="twitter:description" content="&amp;ensp;&amp;ensp;&amp;ensp;&amp;ensp;写这篇文章也是为了巩固一下使用Hexo搭建博客的流程，刚开始接触博客，应该说比较晚了，比较惭愧，那目前比较流行的大部分也是通过Hexo和GitHub来搭建个人博客，毕竟GitHub提供免费的服务器，这点还是很nice的，搭建过程也踩了不少坑，大致总结一下吧，也是通过网上搜索了我遇到的相关情况，把这些问题以及搭建的过程写下来后续我也能看看巩固一下，好了">
+<meta name="twitter:image" content="http://ommprbmup.bkt.clouddn.com/blogImage/png/001.png">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/03/11/Hexo-Github搭建个人博客/"/>
+
+
+  <title> Hexo+Github搭建个人博客 | 孙帅并不帅Blog </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="zh-CN">
+
+  
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">孙帅并不帅Blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle"></p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                Hexo+Github搭建个人博客
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2017-03-11T09:59:30+08:00" content="2017-03-11">
+              2017-03-11
+            </time>
+          </span>
+
+          
+
+          
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>&ensp;&ensp;&ensp;&ensp;写这篇文章也是为了巩固一下使用Hexo搭建博客的流程，刚开始接触博客，应该说比较晚了，比较惭愧，那目前比较流行的大部分也是通过Hexo和GitHub来搭建个人博客，毕竟GitHub提供免费的服务器，这点还是很nice的，搭建过程也踩了不少坑，大致总结一下吧，也是通过网上搜索了我遇到的相关情况，把这些问题以及搭建的过程写下来后续我也能看看巩固一下，好了下面开始操练起来了。(目前是基于mac OS操作系统搭建的)</p>
+<p>##GitHub上创建repository</p>
+<p>###1.首先创建一个repository<br><img src="http://ommprbmup.bkt.clouddn.com/blogImage/png/001.png" alt="New repository"></p>
+<p><img src="http://ommprbmup.bkt.clouddn.com/blogImage/png/002.png" alt="New repository"><br>&ensp;&ensp;&ensp;&ensp;这里注意一下Repository name一定是GitHub的用户名.github.io的形式，否则不能成功部署。到了这里点击Create repository就算创建成功了一个repository。</p>
+<p>###2.添加SSH Keys<br>&ensp;&ensp;&ensp;&ensp;这个很关键SSH keys，由于远程的代码管理是基于SSH的,所以要使用远程的Git则需要SSH的配置，继续上图开始配置。<br><img src="http://ommprbmup.bkt.clouddn.com/blogImage/png/003.png" alt="Personal Setting"></p>
+<p><img src="http://ommprbmup.bkt.clouddn.com/blogImage/png/004.png" alt="New SSH Key"><br>&ensp;&ensp;&ensp;&ensp;这个选择到SSH and GPG keys会出现右边的界面，这个时候点击右上角的New SSH key就会出现下图。<br><img src="http://ommprbmup.bkt.clouddn.com/blogImage/png/005.png" alt="Add SSH Key"><br>&ensp;&ensp;&ensp;&ensp;title可以自己起个名字，关键是key怎么填写呢，看着需要一定的格式，是的这里我们需要通过终端打开自己的.ssh里面的一个id_rsa.pub文件如下图找到这个文件所在。<br><img src="http://ommprbmup.bkt.clouddn.com/blogImage/png/006.png" alt="Open id_rsa.pub"></p>
+<p><img src="http://ommprbmup.bkt.clouddn.com/blogImage/png/007.png" alt="Open id_rsa.pub"><br>&ensp;&ensp;&ensp;&ensp;打开id_rsa.pub文件，文本编辑器打开即可，我们需要将里面的东西全部复制下来。<br><img src="http://ommprbmup.bkt.clouddn.com/blogImage/png/008.png" alt="Copy id_rsa Content"><br>&ensp;&ensp;&ensp;&ensp;这个是我自己的，每个用户的不一样，复制之后就可以粘贴到我们之前说的这个key里面。<br><img src="http://ommprbmup.bkt.clouddn.com/blogImage/png/009.png" alt="Add Success"><br>&ensp;&ensp;&ensp;&ensp;至此SSH keys就算完成了，如何测试是否可行了呢，这时候打开终端，输入ssh -T git@github.com,如下图。<br><img src="http://ommprbmup.bkt.clouddn.com/blogImage/png/010.png" alt="Success"><br>&ensp;&ensp;&ensp;&ensp;如果出现successfully就是已经完成了。好了现在搭建GitHub的resitory就算完成了。</p>
+<p>##安装并设置Hexo主题</p>
+<p>###1.安装Hexo<br>&ensp;&ensp;&ensp;这些网上有很多，我就贴一下具体的步骤吧。</p>
+<p><strong>安装环境及Hexo</strong></p>
+<blockquote>
+<p>node.js</p>
+<p>git</p>
+</blockquote>
+<p><strong>Mac OSX 用户在终端里用npm命令安装 Hexo：</strong></p>
+<blockquote>
+<p>npm install -g hexo-cli (若写入权限不够，加sudo)</p>
+</blockquote>
+<p><strong>初始化Hexo</strong></p>
+<blockquote>
+<p>Hexo 安装好后，打开终端，想好 Hexo 的初始化位置，比如：/Users/sunshine/Blog/hexo，执行一下命令行：</p>
+<p>1.hexo init /Users/sunshine/Blog/hexo</p>
+<p>2.cd /Users/sunshine/Blog/hexo</p>
+<p>3.npm install(若写入权限不够，加sudo)</p>
+</blockquote>
+<p>###2.配置Hexo<br>&ensp;&ensp;&ensp;配置文件有三个是比较重要的</p>
+<p>####_config.yml配置<br>&ensp;&ensp;&ensp;打开之后有几个是需要配置的，下图是_config.yml的几个比较重要的配置<br><img src="http://ommprbmup.bkt.clouddn.com/blogImage/png/013.png" alt="Set _config.yml"></p>
+<p><img src="http://ommprbmup.bkt.clouddn.com/blogImage/png/012.png" alt="Set _config.yml"></p>
+<p><img src="http://ommprbmup.bkt.clouddn.com/blogImage/png/011.png" alt="Set _config.yml"></p>
+<p>&ensp;&ensp;&ensp;&ensp;首先<strong>Site</strong>下面的东西是博客上面需要显示的一些基本配置，关键是<strong>deploy</strong>下面的type注意一定是git现在Hexo3.0已经默认是git类型github已经不起作用了，还有branch事master分支，<strong>Extensions</strong>下面的theme是主题，我们可以自己配置一些喜欢的主题，之前我用的是<a href="http://moxfive.xyz/?qqdrsign=98D4" target="_blank" rel="external">MOxFIVE</a>写的<a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" rel="external">yelee</a>主题，可以在终端cd到hexo目录下（cd /Users/sunshine/Blog/hexo）执行一下命令。</p>
+<blockquote>
+<p>git clone <a href="https://github.com/MOxFIVE/hexo-theme-yelee.git" target="_blank" rel="external">https://github.com/MOxFIVE/hexo-theme-yelee.git</a> themes/yelee</p>
+</blockquote>
+<p>&ensp;&ensp;&ensp;&ensp;主要现在有的人比较喜欢next主题，因为这个主题相对来说比较简洁，同样可以执行一下命令。</p>
+<blockquote>
+<p>git clone <a href="https://github.com/iissnan/hexo-theme-next" target="_blank" rel="external">https://github.com/iissnan/hexo-theme-next</a> themes/next</p>
+</blockquote>
+<p>&ensp;&ensp;&ensp;&ensp;这样主题我们可以在hexo下的themes文件下可以看到相关的主题文件，打开themes下的next文件（本人用的是next主题，所以就介绍一下next相关配置），打开next下的_config.yml文件。</p>
+<p>&ensp;&ensp;&ensp;&ensp;可能刚开始在预览的过程中，<strong>首页和归档</strong>都是英文显示的，这个时候我们需要把next文件下的language文件的zh-Hans.yml重命名成zh-CN.yml，这个也是之前踩过的坑。</p>
+<p>&ensp;&ensp;&ensp;&ensp;还有侧边栏是需要点击才会显示的，如果我们想让侧边栏显示在左边而不是隐藏的话，需要将<strong>scheme: Pisces</strong>改成这个属性就好了，还有一些图标未显示，如github，或者weibo的图标，是因为需要像下图这样配置。<br><img src="http://ommprbmup.bkt.clouddn.com/blogImage/png/014.png" alt="Set icon"></p>
+<p>&ensp;&ensp;&ensp;&ensp;还有如果不想让整篇文章显示全，只是显示大概，下面出现阅读全文的按钮的话，需要设置这个<strong>auto_excerpt</strong>:下面的<strong>enable: true</strong>这样就可以了</p>
+<p>大致这样就算配置完成了，那么需要将Hexo的一些常用指令说一下</p>
+<blockquote>
+<p>hexo clean 在频繁切换主题或者写博客的时候最后先执行一下这个命令</p>
+<p>hexo g 将修改的东西生成到public静态文件里面，这步必须要有</p>
+<p>hexo s 可以生成本地预览</p>
+<p>hexo d 将修改过的东西提交到GitHub上</p>
+</blockquote>
+<p>&ensp;&ensp;&ensp;&ensp;由于之前我不小心把整个hexo给删除了，重新配置之后hexo d老是失败，就上网搜了一下发现执行下面这个就行了，这个命令就是将hexo的_config.yml的deploy的type改成git型，但是我里面已经是git的不明白这个是为啥，估计是之前缓存问题吧</p>
+<blockquote>
+<p>npm install hexo-deployer-git –save</p>
+</blockquote>
+<p>###3.总结<br>&ensp;&ensp;&ensp;&ensp;至此整个Hexo+GitHub基本就配置完成了，如果大家不想使用GitHub上的域名，可以自己在万网上买个域名，买完之后需要域名解析如下图。<br><img src="http://ommprbmup.bkt.clouddn.com/blogImage/png/015.png" alt="Buy www"><br>&ensp;&ensp;&ensp;&ensp;之后需要在自己建的resitory上也设置一下，如下图，打开setting，找到下面的GitHub pages在Custom domain下面写上自己买的域名就ok了，后面就可以拿出去装个逼还能跑了。<br><img src="http://ommprbmup.bkt.clouddn.com/blogImage/png/016.png" alt="Personal Setting"></p>
+<p><img src="http://ommprbmup.bkt.clouddn.com/blogImage/png/017.png" alt="Custom domain"><br>那么搭建了博客之后，我们就可以写自己的文章，和创建文章了，创建文章依然可以使用下面的指令</p>
+<blockquote>
+<p>hexo new “new article”</p>
+</blockquote>
+<p>执行完之后会出现一个.md的文件打开之后我们可以使用MarDown的编辑器进行编辑，编辑完成，就可以通过</p>
+<blockquote>
+<p>hexo g 和 hexo d来进行提交。</p>
+</blockquote>
+<p>可能有说的不对的地方还请大家指教，以后就要开始好好学习写东西了，又可以写完东西之后拿出来装个逼了，哈哈。</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/03/腾讯面经/" rel="next" title="腾讯面经">
+                <i class="fa fa-chevron-left"></i> 腾讯面经
+              </a>
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/images/avatar.gif"
+               alt="孙帅" />
+          <p class="site-author-name" itemprop="name">孙帅</p>
+          <p class="site-description motion-element" itemprop="description">沉淀，学习，成长</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-name">日志</span>
+            </a>
+          </div>
+
+          
+
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/SunShineIOS" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/SunShineShuaishuai?is_all=1" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <p class="post-toc-empty">此文章未包含目录</p>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">孙帅</span>
+</div>
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.2"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.2"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.2"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.2"></script>
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+
+</body>
+</html>
